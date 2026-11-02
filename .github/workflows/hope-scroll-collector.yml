@@ -1,0 +1,127 @@
+
+name: Hope Scroll Shorts Collector
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 11 * * 1'
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install collector
+        run: python -m pip install --upgrade yt-dlp
+      - name: Collect Shorts IDs, saving after each channel
+        shell: bash
+        run: |
+          cat > /tmp/hope_collect.py <<'PY'
+          import csv, json, re, time
+          from pathlib import Path
+          from datetime import datetime, timezone
+          import yt_dlp
+
+          channels = [
+              ('Billy Graham', 'https://www.youtube.com/@billygraham/shorts'),
+              ('Charles Stanley · In Touch', 'https://www.youtube.com/channel/UCXL6kvDyoQpvtaeafC4pLyg/shorts'),
+              ('T. D. Jakes', 'https://www.youtube.com/@TDJakesOfficial/shorts'),
+              ('Joseph Prince', 'https://www.youtube.com/@JosephPrince/shorts'),
+              ('I Am Second', 'https://www.youtube.com/@iamsecond/shorts'),
+              ('Delafé Testimonies', 'https://www.youtube.com/@delafetestimonies/shorts')
+          ]
+          library = Path('video-library.json')
+          out = Path('collection-results')
+          out.mkdir(exist_ok=True)
+          if library.exists():
+              doc = json.loads(library.read_text(encoding='utf-8'))
+          else:
+              doc = {'version': 1, 'items': [
+                  {'id':'l_5o8icRvhM','source':'Billy Graham','title':'Will you make the choice to follow Jesus today?'},
+                  {'id':'Ot5NirWf4CM','source':'Billy Graham','title':'Who is Jesus?'},
+                  {'id':'54fSVz3Vvhg','source':'Charles Stanley · In Touch','title':'Making it through hard times'},
+                  {'id':'WfLoabwUJYM','source':'Charles Stanley · In Touch','title':'Is God in everything?'},
+                  {'id':'NZinFKQrkbY','source':'Joseph Prince · TBN Shorts','title':'Grace flows in the worry-free areas of your life'},
+                  {'id':'cx_nEclDrzU','source':'Joseph Prince · TBN Shorts','title':'Grace Changes Your Life'}
+              ]}
+          entries = doc.get('items', [])
+          if not isinstance(entries, list):
+              raise ValueError('Invalid video library items')
+          seen = {str(x.get('id')) for x in entries if isinstance(x, dict)}
+          reports = []
+          for label, url in channels:
+              found = []
+              error = ''
+              try:
+                  opts = dict(extract_flat='in_playlist', skip_download=True,
+                              ignoreerrors=True, quiet=True, playlistend=100,
+                              socket_timeout=20, retries=1, extractor_retries=1,
+                              sleep_interval_requests=1)
+                  with yt_dlp.YoutubeDL(opts) as ydl:
+                      result = ydl.extract_info(url, download=False)
+                  for raw in (result or {}).get('entries') or []:
+                      if not isinstance(raw, dict):
+                          continue
+                      vid = str(raw.get('id') or '')
+                      dur = raw.get('duration')
+                      if not re.fullmatch(r'[A-Za-z0-9_-]{11}', vid):
+                          continue
+                      if isinstance(dur, (int, float)) and dur > 180:
+                          continue
+                      found.append({'id': vid, 'source': label,
+                                    'title': str(raw.get('title') or label + ' Short')[:180]})
+              except Exception as exc:
+                  error = str(exc)[:300]
+                  print('Channel error:', label, error, flush=True)
+              added = 0
+              for item in found:
+                  if item['id'] not in seen:
+                      seen.add(item['id'])
+                      entries.append(item)
+                      added += 1
+              doc['items'] = entries
+              doc['last_collection_utc'] = datetime.now(timezone.utc).isoformat()
+              library.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+              reports.append({'channel': label, 'returned': len(found), 'new': added, 'error': error})
+              (out / 'report.json').write_text(json.dumps(reports, ensure_ascii=False, indent=2) + '\n')
+              (out / 'checkpoint-video-library.json').write_text(json.dumps(doc, ensure_ascii=False, indent=2) + '\n')
+              print(label, 'found:', len(found), 'new:', added, 'total:', len(entries), flush=True)
+              time.sleep(2)
+          with (out / 'video-ids.csv').open('w', encoding='utf-8', newline='') as fp:
+              writer = csv.DictWriter(fp, fieldnames=['id', 'source', 'title', 'url'])
+              writer.writeheader()
+              for item in entries:
+                  writer.writerow({'id':item.get('id',''), 'source':item.get('source',''),
+                                   'title':item.get('title',''),
+                                   'url':'https://www.youtube.com/shorts/'+str(item.get('id',''))})
+          print('TOTAL CANDIDATE IDs:', len(entries))
+          PY
+          python /tmp/hope_collect.py
+      - name: Upload candidate list and audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hope-scroll-video-ids
+          path: |
+            video-library.json
+            collection-results/
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Save growing video library to repository
+        if: success()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add video-library.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh Hope Scroll candidate video IDs'
+            git push
