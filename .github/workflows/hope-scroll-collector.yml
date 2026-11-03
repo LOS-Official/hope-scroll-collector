@@ -15,7 +15,7 @@ concurrency:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 90
 
     steps:
       - name: Checkout repository
@@ -55,8 +55,24 @@ jobs:
               ("Dr. Caroline Leaf", "https://www.youtube.com/@drcarolineleaf/shorts"),
               ("Biblical Mindset Lab", "https://www.youtube.com/channel/UCMIhjyASZNyoqUh_3mkKDxA/shorts"),
               ("Craig Groeschel", "https://www.youtube.com/@craiggroeschel/shorts"),
-              ("Steven Furtick", "https://www.youtube.com/@stevenfurtick/shorts")
+              ("Steven Furtick", "https://www.youtube.com/@stevenfurtick/shorts"),
+              ("Unity Center of Light", "https://www.youtube.com/@unitycenteroflight/shorts"),
+              ("Reasonable Faith UK", "https://www.youtube.com/@reasonablefaithuk/shorts"),
+              ("Parousia Media", "https://www.youtube.com/@parousiamedia/shorts"),
+              ("The Lila Rose Show", "https://www.youtube.com/@lilaroseshow/shorts"),
+              ("Bible Alive", "https://www.youtube.com/@bible_alive/shorts"),
+              ("Daily Christian", "https://www.youtube.com/@dailychristian_/shorts"),
+              ("Holy Christian Places", "https://www.youtube.com/@holychristianplaces/shorts"),
+              ("Capturing Christianity", "https://www.youtube.com/@capturingchristianity/shorts")
           ]
+
+          # New sources receive a complete initial Shorts scan.
+          # Earlier channels retain their existing latest-100 collection setting.
+          full_scan_channels = {
+              "Unity Center of Light", "Reasonable Faith UK", "Parousia Media",
+              "The Lila Rose Show", "Bible Alive", "Daily Christian",
+              "Holy Christian Places", "Capturing Christianity"
+          }
 
           library_path = Path("video-library.json")
           results_dir = Path("collection-results")
@@ -95,7 +111,7 @@ jobs:
                       "skip_download": True,
                       "ignoreerrors": True,
                       "quiet": True,
-                      "playlistend": 100,
+                      "playlistend": -1 if channel_name in full_scan_channels else 100,
                       "socket_timeout": 20,
                       "retries": 1,
                       "extractor_retries": 1,
