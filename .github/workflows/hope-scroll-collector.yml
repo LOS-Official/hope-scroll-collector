@@ -48,7 +48,8 @@ jobs:
               ("T. D. Jakes", "https://www.youtube.com/@TPHDallas/shorts"),
               ("Joseph Prince", "https://www.youtube.com/@JosephPrince/shorts"),
               ("I Am Second", "https://www.youtube.com/@IAm2nd/shorts"),
-              ("Delafe Testimonies", "https://www.youtube.com/@delafetestimonies/shorts")
+              ("Delafe Testimonies", "https://www.youtube.com/@delafetestimonies/shorts"),
+              ("Jordan B. Peterson", "https://www.youtube.com/@jordanbpeterson/shorts")
           ]
 
           library_path = Path("video-library.json")
