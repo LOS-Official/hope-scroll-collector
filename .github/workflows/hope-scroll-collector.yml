@@ -49,7 +49,13 @@ jobs:
               ("Joseph Prince", "https://www.youtube.com/@JosephPrince/shorts"),
               ("I Am Second", "https://www.youtube.com/@IAm2nd/shorts"),
               ("Delafe Testimonies", "https://www.youtube.com/@delafetestimonies/shorts"),
-              ("Jordan B. Peterson", "https://www.youtube.com/@jordanbpeterson/shorts")
+              ("Jordan B. Peterson", "https://www.youtube.com/@jordanbpeterson/shorts"),
+              ("BibleProject", "https://www.youtube.com/@bibleproject/shorts"),
+              ("Impact Video Ministries", "https://www.youtube.com/channel/UCTsRTfwxwj4_ep_MNM17lqg/shorts"),
+              ("Dr. Caroline Leaf", "https://www.youtube.com/@drcarolineleaf/shorts"),
+              ("Biblical Mindset Lab", "https://www.youtube.com/channel/UCMIhjyASZNyoqUh_3mkKDxA/shorts"),
+              ("Craig Groeschel", "https://www.youtube.com/@craiggroeschel/shorts"),
+              ("Steven Furtick", "https://www.youtube.com/@stevenfurtick/shorts")
           ]
 
           library_path = Path("video-library.json")
