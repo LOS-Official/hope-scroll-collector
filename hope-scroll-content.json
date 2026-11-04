@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "shows": [
+    {
+      "id": "agape-ministries",
+      "title": "Agape Ministries Podcast",
+      "kind": "audio",
+      "cover": "assets/agape-ministries-podcast.jpeg",
+      "description": "Meaningful conversations about Scripture, faith, and living God’s Word.",
+      "tagline": "",
+      "contributors": [
+        "Los",
+        "Mr. Mac"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "verse-to-verse",
+      "title": "Verse to Verse",
+      "kind": "video",
+      "cover": "assets/verse-to-verse-podcast.jpeg",
+      "description": "Faith, music, hip-hop, culture, and honest conversations.",
+      "tagline": "",
+      "contributors": [
+        "Los",
+        "Benjamin"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "kingdom-city",
+      "title": "Kingdom City",
+      "kind": "audio",
+      "cover": "assets/kingdom-city-podcast.png",
+      "description": "Christian faith, testimony, music, and conversations about redemption.",
+      "tagline": "From Tragedy to Triumph.",
+      "contributors": [
+        "Los",
+        "Chris"
+      ],
+      "status": "published"
+    }
+  ],
+  "articles": [],
+  "news": [],
+  "promotions": [],
+  "announcements": [],
+  "media": [],
+  "settings": {
+    "promoInterval": 7,
+    "featuredPodcast": ""
+  },
+  "credentials": {
+    "studioPin": {
+      "value": "0Mt64OqyJg_rn_dotnYXSLrVbLwXn7FQilPXM8qlpx6N_0cL",
+      "revision": "47a12588-f42f-4516-9464-56fe1a2ef4ed"
+    }
+  }
+}
