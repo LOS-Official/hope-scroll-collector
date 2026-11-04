@@ -41,7 +41,25 @@
       "status": "published"
     }
   ],
-  "articles": [],
+  "articles": [
+    {
+      "id": "42952d0e-3552-4e9d-b35d-ecfa29701a42",
+      "show": "kingdom-city",
+      "author": "Chris",
+      "title": "Test",
+      "body": "Testing 123",
+      "description": "",
+      "category": "Devotional",
+      "scripture": "",
+      "image": "",
+      "video": "",
+      "link": "",
+      "status": "published",
+      "createdAt": "2026-11-04T06:01:42.995Z",
+      "updatedAt": "2026-11-04T06:01:42.995Z",
+      "history": []
+    }
+  ],
   "news": [],
   "promotions": [],
   "announcements": [],
