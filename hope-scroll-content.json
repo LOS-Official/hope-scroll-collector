@@ -39,6 +39,17 @@
         "Chris"
       ],
       "status": "published"
+    },
+    {
+      "id": "my-human-xperience",
+      "title": "My Human Xperience",
+      "kind": "audio",
+      "cover": "https://res.cloudinary.com/w2plyalo/image/upload/v1793773776/IMG_5094.jpg",
+      "description": "",
+      "tagline": "",
+      "contributors": [],
+      "status": "published",
+      "updatedAt": "2026-11-04T06:31:14.578Z"
     }
   ],
   "articles": [
