@@ -16,6 +16,22 @@
       "status": "published",
       "createdAt": "2026-11-04T06:34:43.965Z",
       "updatedAt": "2026-11-04T06:34:43.967Z"
+    },
+    {
+      "id": "b23a880f-e983-41d5-8fb9-a95872a5e678",
+      "show": "kingdom-city",
+      "kind": "audio",
+      "title": "Kingdom_City_S01E01_The_Spirit_of_Yahweh_Living_Within_Us",
+      "description": "Discover what it means for the Holy Spirit to dwell within believers, how God's presence guides and strengthens us, and why His faithfulness remains constant through life's challenges.",
+      "number": 1,
+      "date": "2026-11-04",
+      "guests": "",
+      "scriptures": "John 14:15–17, John 14:26, John 15:4–5, John 16:33, 1 Corinthians 6:19, Romans 8:9–11, Romans 8:16, Romans 8:26, Romans 8:38–39, Hebrews 13:5",
+      "notes": "",
+      "url": "https://res.cloudinary.com/w2plyalo/video/upload/v1793833986/Kingdom_City_S01E01_The_Spirit_of_Yahweh_Living_Within_Us.mp3",
+      "status": "published",
+      "createdAt": "2026-11-04T23:22:25.583Z",
+      "updatedAt": "2026-11-04T23:22:25.585Z"
     }
   ]
 }
