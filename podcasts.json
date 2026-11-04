@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "979808f2-3fce-47fc-b839-093584bfb088",
+      "show": "my-human-xperience",
+      "kind": "audio",
+      "title": "My Human Xperience",
+      "description": "Coming soon! \n\nFeel free to visit: https://blog.myhumanxperience.com",
+      "number": 1,
+      "date": "2026-11-04",
+      "guests": "",
+      "scriptures": "",
+      "notes": "",
+      "url": "https://player.cloudinary.com/embed/?cloud_name=w2plyalo&public_id=MHX_Placeholder_1_video",
+      "status": "published",
+      "createdAt": "2026-11-04T06:34:43.965Z",
+      "updatedAt": "2026-11-04T06:34:43.967Z"
+    }
+  ]
+}
