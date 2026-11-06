@@ -15,6 +15,15 @@
   ],
   "activity": [
     {
+      "id": "82134f7f-b9aa-4738-a770-50a83326e378",
+      "actorId": "owner",
+      "actor": "Carlos Aleman Jr.",
+      "area": "community",
+      "action": "review approve",
+      "detail": "77b452c6-880d-4e86-9033-7799a684017e",
+      "at": "2026-11-06T11:55:11.540Z"
+    },
+    {
       "id": "bd5b3d4d-a663-44ba-9ee1-85900e1e12c9",
       "actorId": "owner",
       "actor": "Carlos Aleman Jr.",
