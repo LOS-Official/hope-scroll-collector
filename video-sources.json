@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "name": "Dry Bar Comedy",
+      "url": "https://youtube.com/@drybarcomedy",
+      "q": "Dry Bar Comedy official #shorts",
+      "enabled": true
+    }
+  ]
+}
