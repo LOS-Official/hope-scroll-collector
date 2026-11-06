@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "managers": [
+    {
+      "id": "f04729e9-cc07-4e29-955a-e1501db1a365",
+      "createdAt": "2026-11-06T05:15:05.019Z",
+      "name": "Stephanie Martin",
+      "username": "smartin",
+      "active": true,
+      "updatedAt": "2026-11-06T05:15:05.021Z",
+      "salt": "8d24ed546b5477bf63cae577ef52a1bd",
+      "hash": "OGLso0FAqlnNrT5nb9q1a2HAowxYSNLgVSiqhDCYjrg",
+      "revision": "8bb1e305-878e-4746-b642-bbf6355feb5a"
+    }
+  ],
+  "activity": []
+}
