@@ -63,7 +63,9 @@ jobs:
               ("Bible Alive", "https://www.youtube.com/@bible_alive/shorts"),
               ("Daily Christian", "https://www.youtube.com/@dailychristian_/shorts"),
               ("Holy Christian Places", "https://www.youtube.com/@holychristianplaces/shorts"),
-              ("Capturing Christianity", "https://www.youtube.com/@capturingchristianity/shorts")
+              ("Capturing Christianity", "https://www.youtube.com/@capturingchristianity/shorts"),
+                  ("Girls Gone Bible", "https://www.youtube.com/@GirlsGoneBible/shorts"),
+              ("Dry Bar Comedy", "https://www.youtube.com/@drybarcomedy/shorts")
           ]
 
           # New sources receive a complete initial Shorts scan.
