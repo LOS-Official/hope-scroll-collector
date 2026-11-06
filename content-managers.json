@@ -13,5 +13,15 @@
       "revision": "8bb1e305-878e-4746-b642-bbf6355feb5a"
     }
   ],
-  "activity": []
+  "activity": [
+    {
+      "id": "3fb0a293-aac4-4d8e-b0ef-08eb96b6c54a",
+      "actorId": "owner",
+      "actor": "Carlos Aleman Jr.",
+      "area": "managers",
+      "action": "created",
+      "detail": "smartin",
+      "at": "2026-11-06T05:15:06.451Z"
+    }
+  ]
 }
