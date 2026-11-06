@@ -1,5 +1,6 @@
 {
   "version": 1,
+  "builtInPromotions": {},
   "shows": [
     {
       "id": "agape-ministries",
@@ -77,7 +78,7 @@
   "media": [],
   "settings": {
     "promoInterval": 7,
-    "featuredPodcast": ""
+    "featuredPodcast": "kingdom-city"
   },
   "credentials": {
     "studioPin": {
