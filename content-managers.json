@@ -15,6 +15,15 @@
   ],
   "activity": [
     {
+      "id": "9dcc1b23-bbcc-4faf-a315-f27a6de3bf7b",
+      "actorId": "f04729e9-cc07-4e29-955a-e1501db1a365",
+      "actor": "Stephanie Martin",
+      "area": "writers",
+      "action": "status_change",
+      "detail": "ed394810-c83d-4b72-ba43-21d4add960a5",
+      "at": "2026-11-06T05:30:42.441Z"
+    },
+    {
       "id": "3fb0a293-aac4-4d8e-b0ef-08eb96b6c54a",
       "actorId": "owner",
       "actor": "Carlos Aleman Jr.",
