@@ -1,6 +1,10 @@
 {
-  "version": 1,
+  "version": 2,
   "constructionNotice": false,
   "writerFrequency": 5,
-  "defaultFeed": "news"
+  "defaultFeed": "news",
+  "welcomeEnabled": false,
+  "welcomeHeading": "Welcome to Hope Scroll",
+  "welcomeMessage": "A moment in the Word. A moment of peace. A moment that matters.",
+  "welcomeTagline": "If you’re going to scroll, feed your spirit."
 }
