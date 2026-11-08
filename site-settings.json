@@ -1,5 +1,6 @@
 {
   "version": 1,
   "constructionNotice": false,
-  "writerFrequency": 5
+  "writerFrequency": 5,
+  "defaultFeed": "news"
 }
