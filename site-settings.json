@@ -1,10 +1,14 @@
 {
-  "version": 2,
+  "version": 3,
   "constructionNotice": false,
   "writerFrequency": 5,
   "defaultFeed": "news",
   "welcomeEnabled": false,
   "welcomeHeading": "Welcome to Hope Scroll",
   "welcomeMessage": "A moment in the Word. A moment of peace. A moment that matters.",
-  "welcomeTagline": "If you’re going to scroll, feed your spirit."
+  "welcomeTagline": "If you’re going to scroll, feed your spirit.",
+  "podcastNoticeEnabled": false,
+  "podcastNoticeHeading": "Introducing Hope Scroll Podcasts!",
+  "podcastNoticeMessage": "Tap the microphone above to explore our shows.",
+  "podcastNoticeSeconds": 6.5
 }
