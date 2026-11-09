@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "rssSources": [
+    {
+      "name": "Christian Today",
+      "urls": [
+        "https://www.christiantoday.com/rss.xml",
+        "https://www.christiantoday.com/rss/feed"
+      ],
+      "url": "https://www.christiantoday.com/rss.xml",
+      "enabled": true
+    },
+    {
+      "name": "The Christian Post",
+      "urls": [
+        "https://www.christianpost.com/rss",
+        "https://www.christianpost.com/services/rss/feed/"
+      ],
+      "url": "https://www.christianpost.com/rss",
+      "enabled": true
+    },
+    {
+      "name": "Jesus Freak Hideout",
+      "urls": [
+        "https://www.jesusfreakhideout.com/news/feed.xml"
+      ],
+      "url": "https://www.jesusfreakhideout.com/news/feed.xml",
+      "enabled": true
+    },
+    {
+      "name": "Christian Newswire",
+      "url": "https://www.christiannewswire.com/feed/",
+      "enabled": true
+    }
+  ]
+}
