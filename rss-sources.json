@@ -36,6 +36,11 @@
       "name": "Christian Post Entertainment",
       "url": "https://www.christianpost.com/category/entertainment/rss",
       "enabled": true
+    },
+    {
+      "name": "NewReleaseToday",
+      "url": "https://www.newreleasetoday.com/news_rss.xml",
+      "enabled": true
     }
   ]
 }
