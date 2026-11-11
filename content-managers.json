@@ -15,6 +15,15 @@
   ],
   "activity": [
     {
+      "id": "3d8a6658-0286-4ee3-9936-a858263a2d3f",
+      "actorId": "owner",
+      "actor": "Carlos Aleman Jr.",
+      "area": "writers",
+      "action": "update",
+      "detail": "a6744d28-3d9e-45ec-8ed3-4ad46cdebb95",
+      "at": "2026-11-11T04:02:53.207Z"
+    },
+    {
       "id": "9e0254b4-f525-4156-854e-2bf43530707b",
       "actorId": "owner",
       "actor": "Carlos Aleman Jr.",
