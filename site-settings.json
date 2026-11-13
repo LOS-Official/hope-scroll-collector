@@ -10,5 +10,6 @@
   "podcastNoticeEnabled": false,
   "podcastNoticeHeading": "Introducing Hope Scroll Podcasts!",
   "podcastNoticeMessage": "Tap the microphone above to explore our shows.",
-  "podcastNoticeSeconds": 6.5
+  "podcastNoticeSeconds": 6.5,
+  "footerLinksVisible": false
 }
